@@ -1,0 +1,13 @@
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\bin\Debug\MBS_PROYECT.exe.config
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\bin\Debug\MBS_PROYECT.exe
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\bin\Debug\MBS_PROYECT.pdb
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.csprojAssemblyReference.cache
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.Properties.Resources.resources
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.csproj.GenerateResource.cache
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.exe
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.pdb
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.Main.resources
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\GUI_MODERNISTA.Form2.resources
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.Ventana_Recarga.resources
+C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.Ventana_Retiros.resources

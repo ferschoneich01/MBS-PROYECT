@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace MBS_PROYECT
 {
-    public partial class Form1 : Form
+    public partial class Ventana_Retiros : Form
     {
-        public Form1()
+        public Ventana_Retiros()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
