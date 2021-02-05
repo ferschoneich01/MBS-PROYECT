@@ -32,5 +32,10 @@ namespace GUI_MODERNISTA
         {
             this.Close();
         }
+
+        private void opcionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

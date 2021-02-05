@@ -595,13 +595,13 @@ namespace MBS_PROYECT
             // cambiarDeCuentaToolStripMenuItem
             // 
             this.cambiarDeCuentaToolStripMenuItem.Name = "cambiarDeCuentaToolStripMenuItem";
-            this.cambiarDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cambiarDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.cambiarDeCuentaToolStripMenuItem.Text = "Cambiar de cuenta";
             // 
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
@@ -624,17 +624,18 @@ namespace MBS_PROYECT
             this.BtnAdministrar.Name = "BtnAdministrar";
             this.BtnAdministrar.Size = new System.Drawing.Size(97, 20);
             this.BtnAdministrar.Text = "Administrar";
+            this.BtnAdministrar.Click += new System.EventHandler(this.BtnAdministrar_Click);
             // 
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             // 
             // btnProveedores
             // 
             this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Size = new System.Drawing.Size(139, 22);
+            this.btnProveedores.Size = new System.Drawing.Size(180, 22);
             this.btnProveedores.Text = "Proveedores";
             this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
@@ -652,7 +653,7 @@ namespace MBS_PROYECT
             // retiroToolStripMenuItem
             // 
             this.retiroToolStripMenuItem.Name = "retiroToolStripMenuItem";
-            this.retiroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.retiroToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.retiroToolStripMenuItem.Text = "Retiro";
             this.retiroToolStripMenuItem.Click += new System.EventHandler(this.retiroToolStripMenuItem_Click);
             // 

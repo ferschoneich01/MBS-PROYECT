@@ -14,9 +14,11 @@ namespace MBS_PROYECT
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new Login());
+
         }
     }
-}
+ }

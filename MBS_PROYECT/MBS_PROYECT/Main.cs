@@ -79,5 +79,10 @@ namespace MBS_PROYECT
 
             vtnRetiros.Show();
         }
+
+        private void BtnAdministrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
