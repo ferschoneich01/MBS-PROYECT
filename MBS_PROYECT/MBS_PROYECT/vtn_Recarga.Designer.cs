@@ -1,7 +1,7 @@
 ﻿
 namespace MBS_PROYECT
 {
-    partial class Ventana_Recarga
+    partial class vtn_Recarga
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace MBS_PROYECT
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventana_Recarga));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vtn_Recarga));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();

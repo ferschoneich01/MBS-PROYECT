@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace MBS_PROYECT
 {
-    public partial class Ventana_Retiros : Form
+    public partial class vtn_registro : Form
     {
-        public Ventana_Retiros()
+        public vtn_registro()
         {
             InitializeComponent();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRegistrar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+      
     }
 }

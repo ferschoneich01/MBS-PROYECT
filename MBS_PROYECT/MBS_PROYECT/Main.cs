@@ -68,14 +68,14 @@ namespace MBS_PROYECT
 
         private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form vtnRecarga = new Ventana_Recarga();
+            Form vtnRecarga = new vtn_Recarga();
 
             vtnRecarga.Show();
         }
 
         private void retiroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form vtnRetiros = new Ventana_Retiros();
+            Form vtnRetiros = new vtn_Retiros();
 
             vtnRetiros.Show();
         }
@@ -83,6 +83,17 @@ namespace MBS_PROYECT
         private void BtnAdministrar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form vtnInv = new vtn_inventario();
+            vtnInv.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

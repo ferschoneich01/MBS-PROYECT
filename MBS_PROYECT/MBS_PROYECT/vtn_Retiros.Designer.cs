@@ -1,7 +1,7 @@
 ﻿
 namespace MBS_PROYECT
 {
-    partial class Ventana_Retiros
+    partial class vtn_Retiros
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace MBS_PROYECT
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ventana_Retiros));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vtn_Retiros));
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();

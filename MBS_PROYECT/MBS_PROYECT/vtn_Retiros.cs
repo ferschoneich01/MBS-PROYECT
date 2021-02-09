@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MBS_PROYECT
 {
-    public partial class Ventana_Recarga : Form
+    public partial class vtn_Retiros : Form
     {
-        public Ventana_Recarga()
+        public vtn_Retiros()
         {
             InitializeComponent();
         }

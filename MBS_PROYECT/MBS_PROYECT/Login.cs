@@ -42,7 +42,13 @@ namespace MBS_PROYECT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtUser.Text == "admin" && txtPass.Text == "admin123")
+            Form vtnReg = new vtn_registro();
+            vtnReg.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "admin" && txtPass.Text == "admin123")
             {
                 Form vtnMain = new Main();
 
