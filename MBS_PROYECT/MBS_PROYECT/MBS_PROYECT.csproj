@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="vtn_facturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtn_facturacion.Designer.cs">
+      <DependentUpon>vtn_facturacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="vtn_inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="vtn_Retiros.Designer.cs">
       <DependentUpon>vtn_Retiros.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="vtn_facturacion.resx">
+      <DependentUpon>vtn_facturacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vtn_inventario.resx">
       <DependentUpon>vtn_inventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +145,10 @@
   <ItemGroup>
     <Content Include="Properties\Resources\-.png" />
     <Content Include="Properties\Resources\x.png" />
+    <Content Include="Resources\business-color_money-coins_icon-icons.com_53446.png" />
+    <Content Include="Resources\cash_40532.png" />
+    <Content Include="Resources\monitorcashcreditcard_101090.png" />
+    <Content Include="Resources\shoppaymentorderbuy-04_icon-icons.com_73886.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

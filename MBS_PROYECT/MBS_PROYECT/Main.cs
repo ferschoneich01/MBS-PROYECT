@@ -95,5 +95,11 @@ namespace MBS_PROYECT
         {
             
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Form vtnFac = new vtn_facturacion();
+            vtnFac.ShowDialog();
+        }
     }
 }
