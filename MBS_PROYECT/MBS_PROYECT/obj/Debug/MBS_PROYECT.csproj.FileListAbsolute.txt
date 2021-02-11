@@ -33,3 +33,4 @@ C:\Users\Sistemas02\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PR
 C:\Users\Sistemas02\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.vtn_facturacion.resources
 C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.vtn_facturacion.resources
 C:\Users\Fernando\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.vtn_Anuncio.resources
+C:\Users\Sistemas02\Desktop\MBS-PROYECT\MBS_PROYECT\MBS_PROYECT\obj\Debug\MBS_PROYECT.vtnDepositos.resources

@@ -12,11 +12,21 @@ namespace MBS_PROYECT
 {
     public partial class Main : Form
     {
+        public string link;
         public Main()
         {
             InitializeComponent();
-        }
 
+            
+            
+        }
+        public void foto(string url)
+        {
+            MessageBox.Show("Se ejecuto " + link);
+            
+            
+            contenedor_img.ImageLocation = url;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -121,8 +131,67 @@ namespace MBS_PROYECT
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form Anun = new vtn_Anuncio();
-            Anun.ShowDialog();
+            OpenFileDialog getImg = new OpenFileDialog();
+            getImg.InitialDirectory = "C:\\";
+            getImg.Filter = "Archivos de imagen (*.jpg)(*.jpeg)|*.jpg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
+
+            if (getImg.ShowDialog() == DialogResult.OK)
+            {
+                contenedor_img.ImageLocation = getImg.FileName;
+                //txtURL.Text = getImg.FileName;
+
+
+            }
+            else
+            {
+                MessageBox.Show("No se selecciono Imagen", "sin seleccion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void Contenedor_img_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button4_KeyDown(object sender, KeyEventArgs e)
+        {
+            OpenFileDialog getImg = new OpenFileDialog();
+            getImg.InitialDirectory = "C:\\";
+            getImg.Filter = "Archivos de imagen (*.jpg)(*.jpeg)|*.jpg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
+
+            if (getImg.ShowDialog() == DialogResult.OK)
+            {
+                contenedor_img.ImageLocation = getImg.FileName;
+                //txtURL.Text = getImg.FileName;
+
+
+            }
+            else
+            {
+                MessageBox.Show("No se selecciono Imagen", "sin seleccion", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void Button3_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void BanproToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DepositoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form dep = new vtnDepositos();
+            dep.Show();
         }
     }
 }

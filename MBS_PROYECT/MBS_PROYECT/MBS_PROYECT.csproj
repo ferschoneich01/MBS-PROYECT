@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="vtn_Anuncio.cs">
+    <Compile Include="vtnDepositos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vtn_Anuncio.Designer.cs">
-      <DependentUpon>vtn_Anuncio.cs</DependentUpon>
+    <Compile Include="vtnDepositos.designer.cs">
+      <DependentUpon>vtnDepositos.cs</DependentUpon>
     </Compile>
     <Compile Include="vtn_facturacion.cs">
       <SubType>Form</SubType>
@@ -102,8 +102,8 @@
     <Compile Include="vtn_Retiros.Designer.cs">
       <DependentUpon>vtn_Retiros.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="vtn_Anuncio.resx">
-      <DependentUpon>vtn_Anuncio.cs</DependentUpon>
+    <EmbeddedResource Include="vtnDepositos.resx">
+      <DependentUpon>vtnDepositos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vtn_facturacion.resx">
       <DependentUpon>vtn_facturacion.cs</DependentUpon>

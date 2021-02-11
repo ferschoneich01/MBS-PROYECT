@@ -106,12 +106,13 @@ namespace MBS_PROYECT
             // contenedor_img
             // 
             this.contenedor_img.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contenedor_img.Location = new System.Drawing.Point(3, 3);
+            this.contenedor_img.Location = new System.Drawing.Point(0, 3);
             this.contenedor_img.Name = "contenedor_img";
             this.contenedor_img.Size = new System.Drawing.Size(326, 241);
             this.contenedor_img.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.contenedor_img.TabIndex = 0;
             this.contenedor_img.TabStop = false;
+            this.contenedor_img.Click += new System.EventHandler(this.Contenedor_img_Click);
             // 
             // panel2
             // 
@@ -159,6 +160,7 @@ namespace MBS_PROYECT
             this.button6.Text = "Buscar";
             this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
             // button5
             // 
@@ -185,6 +187,7 @@ namespace MBS_PROYECT
             this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Button4_KeyDown);
             // 
             // button3
             // 
@@ -561,14 +564,14 @@ namespace MBS_PROYECT
             // cambiarDeCuentaToolStripMenuItem
             // 
             this.cambiarDeCuentaToolStripMenuItem.Name = "cambiarDeCuentaToolStripMenuItem";
-            this.cambiarDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cambiarDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.cambiarDeCuentaToolStripMenuItem.Text = "Cambiar de cuenta";
             this.cambiarDeCuentaToolStripMenuItem.Click += new System.EventHandler(this.cambiarDeCuentaToolStripMenuItem_Click);
             // 
             // cerrarSesionToolStripMenuItem
             // 
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
@@ -596,14 +599,14 @@ namespace MBS_PROYECT
             // inventarioToolStripMenuItem
             // 
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
             // 
             // btnProveedores
             // 
             this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Size = new System.Drawing.Size(180, 22);
+            this.btnProveedores.Size = new System.Drawing.Size(139, 22);
             this.btnProveedores.Text = "Proveedores";
             this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
@@ -617,11 +620,12 @@ namespace MBS_PROYECT
             this.banproToolStripMenuItem.Name = "banproToolStripMenuItem";
             this.banproToolStripMenuItem.Size = new System.Drawing.Size(145, 20);
             this.banproToolStripMenuItem.Text = "Transaccion Bancaria";
+            this.banproToolStripMenuItem.Click += new System.EventHandler(this.BanproToolStripMenuItem_Click);
             // 
             // retiroToolStripMenuItem
             // 
             this.retiroToolStripMenuItem.Name = "retiroToolStripMenuItem";
-            this.retiroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.retiroToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.retiroToolStripMenuItem.Text = "Retiro";
             this.retiroToolStripMenuItem.Click += new System.EventHandler(this.retiroToolStripMenuItem_Click);
             // 
@@ -630,6 +634,7 @@ namespace MBS_PROYECT
             this.depositoToolStripMenuItem.Name = "depositoToolStripMenuItem";
             this.depositoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.depositoToolStripMenuItem.Text = "Deposito";
+            this.depositoToolStripMenuItem.Click += new System.EventHandler(this.DepositoToolStripMenuItem_Click);
             // 
             // Main
             // 
