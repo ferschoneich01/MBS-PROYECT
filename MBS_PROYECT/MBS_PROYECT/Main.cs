@@ -63,7 +63,10 @@ namespace MBS_PROYECT
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form log = new Login();
 
+            log.Show();
+            this.Hide();
         }
 
         private void serviciosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -100,6 +103,26 @@ namespace MBS_PROYECT
         {
             Form vtnFac = new vtn_facturacion();
             vtnFac.ShowDialog();
+        }
+
+        private void cambiarDeCuentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form log = new Login();
+
+            log.Show();
+            this.Hide();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form Anun = new vtn_Anuncio();
+            Anun.ShowDialog();
         }
     }
 }
