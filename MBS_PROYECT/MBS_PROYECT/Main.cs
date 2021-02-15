@@ -66,9 +66,7 @@ namespace MBS_PROYECT
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-            Form formulario = new GUI_MODERNISTA.Form2();
-
-            formulario.Show();
+           
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)

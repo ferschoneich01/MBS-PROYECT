@@ -48,9 +48,13 @@ namespace MBS_PROYECT
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Conexion_BD.conexion.Conectar();
+
             if (txtUser.Text == "admin" && txtPass.Text == "admin123")
             {
                 Form vtnMain = new Main();
+                
+                
 
                 vtnMain.Show();
 
