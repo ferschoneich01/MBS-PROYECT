@@ -20,49 +20,9 @@ namespace MBS_PROYECT
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection("server=FER-PC\\FERNANDO01;database=MBS_DATA;integrated security = true");
+        
 
-        public void logear(string user, string pass) {
-
-            try
-            {
-
-                con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Nombre,Contraseña FROM USUARIO WHERE Nombre = @nombre AND Contraseña = Contraseña", con);
-                cmd.Parameters.AddWithValue("nombre", user);
-                cmd.Parameters.AddWithValue("contraseña", pass);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                if (dt.Rows.Count == 1)
-                {
-                    this.Hide();
-                    if (dt.Rows[1][2].ToString() == "Admin")
-                    {
-                        //Form vtnMain new Main(dt.Rows[1][1].ToString());
-
-
-                    }
-                    else if (dt.Rows[1][2].ToString() == "Usuario") { 
-                    
-                    }
-
-                }
-                else {
-                    MessageBox.Show("Usuario y/o Contraseña Incorrecta");
-                }
-            }
-            catch (Exception e)
-            {
-
-                MessageBox.Show(e.Message);
-            }
-            finally { 
-            
-
-            }
-        }
+        
 
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -96,22 +56,38 @@ namespace MBS_PROYECT
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-
-            if (txtUser.Text == "admin" && txtPass.Text == "admin123")
+            try
             {
-                Form vtnMain = new Main();
-                
-                
+                using (SqlConnection con = new SqlConnection("server=FER-PC\\FERNANDO01;database=MBS_DATA;integrated security = true"))
+                {
 
-                vtnMain.Show();
+                    using (SqlCommand cmd = new SqlCommand("SELECT Nombre,Contraseña FROM USUARIO WHERE Nombre = '" + txtUser.Text + "' AND Contraseña = '" + txtPass.Text + "'",con))
+                    {
+                        con.Open();
+                        SqlDataReader dr = cmd.ExecuteReader();
+                        if (dr.Read())
+                        {
+                            Form vtnMain = new Main();
 
-                this.Hide();
+
+
+                            vtnMain.Show();
+
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Contraseña o Usuarioincorrectos :(");
+                        }
+                    }
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Contraseña o Usuarioincorrectos :(");
+                MessageBox.Show(""+ex);
             }
+
+            
 
             BorrarMensajeError();
             if (
