@@ -56,6 +56,7 @@ namespace MBS_PROYECT
             this.button1.TabIndex = 0;
             this.button1.Text = "RETIRAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -186,7 +187,7 @@ namespace MBS_PROYECT
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
             // 
-            // Ventana_Retiros
+            // vtn_Retiros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -205,7 +206,7 @@ namespace MBS_PROYECT
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
-            this.Name = "Ventana_Retiros";
+            this.Name = "vtn_Retiros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RETIROS";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

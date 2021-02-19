@@ -13,10 +13,13 @@ namespace MBS_PROYECT
     public partial class Main : Form
     {
         public string link;
+        public float suma;
+        
         public Main()
         {
             InitializeComponent();
 
+            
             
             
         }
@@ -66,7 +69,8 @@ namespace MBS_PROYECT
 
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-           
+            Form prov = new vtn_Proveedores();
+            prov.ShowDialog();
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,8 +113,10 @@ namespace MBS_PROYECT
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Form vtnFac = new vtn_facturacion();
-            vtnFac.ShowDialog();
+            
+            Pago p = new Pago(LBLTOT.Text);
+            p.Show();
+            this.Hide();
         }
 
         private void cambiarDeCuentaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -149,6 +155,20 @@ namespace MBS_PROYECT
         private void Button6_Click(object sender, EventArgs e)
         {
             
+            if(txtArticulo.Text == "" || txtCant.Text == "")
+            {
+
+                MessageBox.Show("Ingrese la cantidad del articulo!");
+            }
+            else
+            {
+                Buscar b = new Buscar(int.Parse(txtCant.Text));
+                b.txtBuscar.Text = txtArticulo.Text;
+                AddOwnedForm(b);  //DECIMOS QUE ELFORMULARIO2 ES HIJO  
+                b.ShowDialog();
+                
+
+            }
 
         }
 
@@ -159,6 +179,7 @@ namespace MBS_PROYECT
 
         private void Button4_KeyDown(object sender, KeyEventArgs e)
         {
+
             OpenFileDialog getImg = new OpenFileDialog();
             getImg.InitialDirectory = "C:\\";
             getImg.Filter = "Archivos de imagen (*.jpg)(*.jpeg)|*.jpg|PNG (*.png)|*.png|GIF (*.gif)|*.gif";
@@ -191,5 +212,47 @@ namespace MBS_PROYECT
             Form dep = new vtnDepositos();
             dep.Show();
         }
+        public void TablaAgregar(DataGridViewRow f)
+        {
+            string cod = f.Cells["Cod_Producto"].Value.ToString();
+            string cod2 = f.Cells["Precio"].Value.ToString();
+            string cod3 = f.Cells["Descripcion"].Value.ToString();
+            string cod4 = f.Cells["stock"].Value.ToString();
+            string cod5 = f.Cells["Tipo"].Value.ToString();
+            string cod6 = f.Cells["proveedor"].Value.ToString();
+
+            this.tabla_productos.Rows.Add(new[] { cod, cod2, cod3, cod4, cod5,cod6 });
+
+        }
+        private void tabla_productos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tabla_productos_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+        {
+
+            //suma = float.Parse(LBLTOT.Text);
+            //LBLTOT.Text = suma.ToString();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(tabla_productos.Rows.Count == 0)
+            {
+                MessageBox.Show("Debe Añadir un producto!");
+            }
+            else
+            {
+                suma -= float.Parse(tabla_productos.CurrentRow.Cells[2].Value.ToString());
+
+                LBLTOT.Text = suma.ToString();
+                tabla_productos.Rows.Remove(tabla_productos.CurrentRow);
+            }
+            
+        }
     }
+
+    
 }

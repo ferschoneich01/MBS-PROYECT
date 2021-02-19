@@ -32,15 +32,16 @@ namespace MBS_PROYECT
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vtn_Recarga));
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTelf = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtMonto = new System.Windows.Forms.TextBox();
+            this.cmbOp = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblFecha = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -54,6 +55,7 @@ namespace MBS_PROYECT
             this.button1.TabIndex = 0;
             this.button1.Text = "RECARGAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -66,23 +68,23 @@ namespace MBS_PROYECT
             this.label1.TabIndex = 1;
             this.label1.Text = "RECARGAS";
             // 
-            // textBox1
+            // txtTelf
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(146, 79);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 29);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTelf.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.txtTelf.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelf.Location = new System.Drawing.Point(146, 110);
+            this.txtTelf.Multiline = true;
+            this.txtTelf.Name = "txtTelf";
+            this.txtTelf.Size = new System.Drawing.Size(252, 29);
+            this.txtTelf.TabIndex = 2;
+            this.txtTelf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(53, 81);
+            this.label2.Location = new System.Drawing.Point(53, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 18);
             this.label2.TabIndex = 3;
@@ -99,29 +101,29 @@ namespace MBS_PROYECT
             this.label3.TabIndex = 5;
             this.label3.Text = "MONTO:";
             // 
-            // textBox2
+            // txtMonto
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(146, 159);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 31);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.Text = " ";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMonto.Location = new System.Drawing.Point(146, 159);
+            this.txtMonto.Multiline = true;
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(252, 31);
+            this.txtMonto.TabIndex = 6;
+            this.txtMonto.Text = " ";
+            this.txtMonto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // comboBox1
+            // cmbOp
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbOp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbOp.FormattingEnabled = true;
+            this.cmbOp.Items.AddRange(new object[] {
             "TIGO",
             "CLARO",
             "COOTEL"});
-            this.comboBox1.Location = new System.Drawing.Point(146, 218);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 28);
-            this.comboBox1.TabIndex = 7;
+            this.cmbOp.Location = new System.Drawing.Point(146, 218);
+            this.cmbOp.Name = "cmbOp";
+            this.cmbOp.Size = new System.Drawing.Size(132, 28);
+            this.cmbOp.TabIndex = 7;
             // 
             // label4
             // 
@@ -164,24 +166,36 @@ namespace MBS_PROYECT
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
             // 
-            // Ventana_Recarga
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblFecha.Location = new System.Drawing.Point(12, 12);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(57, 20);
+            this.lblFecha.TabIndex = 12;
+            this.lblFecha.Text = "label5";
+            // 
+            // vtn_Recarga
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(557, 341);
+            this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cmbOp);
+            this.Controls.Add(this.txtMonto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTelf);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "Ventana_Recarga";
+            this.Name = "vtn_Recarga";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RECARGAS";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -196,14 +210,15 @@ namespace MBS_PROYECT
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTelf;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtMonto;
+        private System.Windows.Forms.ComboBox cmbOp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblFecha;
     }
 }

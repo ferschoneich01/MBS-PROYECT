@@ -10,14 +10,21 @@ using System.Windows.Forms;
 
 namespace MBS_PROYECT
 {
-    public partial class vtn_Retiros : Form
+    public partial class vtn_Proveedores : Form
     {
-        public vtn_Retiros()
+        public vtn_Proveedores()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

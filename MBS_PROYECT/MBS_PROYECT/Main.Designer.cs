@@ -29,20 +29,30 @@ namespace MBS_PROYECT
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panel1 = new System.Windows.Forms.Panel();
             this.contenedor_img = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabla_productos = new System.Windows.Forms.DataGridView();
+            this.Cod_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.Panel();
+            this.LBLTOT = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -65,9 +75,9 @@ namespace MBS_PROYECT
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCant = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtArticulo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -86,7 +96,7 @@ namespace MBS_PROYECT
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_productos)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.txtCantidad.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_graficas)).BeginInit();
             this.panel5.SuspendLayout();
@@ -125,29 +135,124 @@ namespace MBS_PROYECT
             // 
             // tabla_productos
             // 
-            this.tabla_productos.AllowUserToOrderColumns = true;
+            this.tabla_productos.AllowUserToAddRows = false;
+            this.tabla_productos.AllowUserToDeleteRows = false;
+            this.tabla_productos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tabla_productos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tabla_productos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.tabla_productos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.tabla_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_productos.Location = new System.Drawing.Point(3, 3);
+            this.tabla_productos.ColumnHeadersVisible = false;
+            this.tabla_productos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cod_Producto,
+            this.Precio,
+            this.Descripcion,
+            this.stock,
+            this.Tipo,
+            this.proveedor});
+            this.tabla_productos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabla_productos.Location = new System.Drawing.Point(0, 0);
             this.tabla_productos.Name = "tabla_productos";
-            this.tabla_productos.Size = new System.Drawing.Size(498, 241);
+            this.tabla_productos.ReadOnly = true;
+            this.tabla_productos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tabla_productos.RowHeadersVisible = false;
+            this.tabla_productos.Size = new System.Drawing.Size(504, 247);
             this.tabla_productos.TabIndex = 0;
+            this.tabla_productos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_productos_CellContentClick);
+            this.tabla_productos.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.tabla_productos_ColumnAdded);
+            // 
+            // Cod_Producto
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cod_Producto.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Cod_Producto.HeaderText = "Cod_Producto";
+            this.Cod_Producto.Name = "Cod_Producto";
+            this.Cod_Producto.ReadOnly = true;
+            this.Cod_Producto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Precio
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Precio.Width = 150;
+            // 
+            // Descripcion
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Descripcion.Width = 150;
+            // 
+            // stock
+            // 
+            this.stock.HeaderText = "stock";
+            this.stock.Name = "stock";
+            this.stock.ReadOnly = true;
+            this.stock.Visible = false;
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
+            this.Tipo.Visible = false;
+            // 
+            // proveedor
+            // 
+            this.proveedor.HeaderText = "proveedor";
+            this.proveedor.Name = "proveedor";
+            this.proveedor.ReadOnly = true;
+            this.proveedor.Visible = false;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+            this.panel3.Controls.Add(this.button7);
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.panel7);
+            this.panel3.Controls.Add(this.txtCantidad);
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Location = new System.Drawing.Point(12, 295);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(836, 199);
             this.panel3.TabIndex = 2;
+            // 
+            // button7
+            // 
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Location = new System.Drawing.Point(788, 147);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(45, 49);
+            this.button7.TabIndex = 8;
+            this.button7.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
@@ -166,7 +271,7 @@ namespace MBS_PROYECT
             // 
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(761, 147);
+            this.button5.Location = new System.Drawing.Point(708, 147);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(61, 49);
             this.button5.TabIndex = 6;
@@ -212,6 +317,7 @@ namespace MBS_PROYECT
             this.button2.Text = "Eliminar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -226,33 +332,33 @@ namespace MBS_PROYECT
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // panel7
+            // txtCantidad
             // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label22);
-            this.panel7.Controls.Add(this.label23);
-            this.panel7.Controls.Add(this.label24);
-            this.panel7.Controls.Add(this.label18);
-            this.panel7.Controls.Add(this.label19);
-            this.panel7.Controls.Add(this.label20);
-            this.panel7.Controls.Add(this.label17);
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.label15);
-            this.panel7.Location = new System.Drawing.Point(482, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(351, 138);
-            this.panel7.TabIndex = 1;
+            this.txtCantidad.BackColor = System.Drawing.Color.White;
+            this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCantidad.Controls.Add(this.LBLTOT);
+            this.txtCantidad.Controls.Add(this.label23);
+            this.txtCantidad.Controls.Add(this.label24);
+            this.txtCantidad.Controls.Add(this.label18);
+            this.txtCantidad.Controls.Add(this.label19);
+            this.txtCantidad.Controls.Add(this.label20);
+            this.txtCantidad.Controls.Add(this.label17);
+            this.txtCantidad.Controls.Add(this.label16);
+            this.txtCantidad.Controls.Add(this.label15);
+            this.txtCantidad.Location = new System.Drawing.Point(482, 3);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(351, 138);
+            this.txtCantidad.TabIndex = 1;
             // 
-            // label22
+            // LBLTOT
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(250, 96);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(62, 29);
-            this.label22.TabIndex = 26;
-            this.label22.Text = "0.00";
+            this.LBLTOT.AutoSize = true;
+            this.LBLTOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLTOT.Location = new System.Drawing.Point(250, 96);
+            this.LBLTOT.Name = "LBLTOT";
+            this.LBLTOT.Size = new System.Drawing.Size(62, 29);
+            this.LBLTOT.TabIndex = 26;
+            this.LBLTOT.Text = "0.00";
             // 
             // label23
             // 
@@ -369,9 +475,9 @@ namespace MBS_PROYECT
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.textBox2);
+            this.panel5.Controls.Add(this.txtCant);
             this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Controls.Add(this.txtArticulo);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Location = new System.Drawing.Point(3, 3);
             this.panel5.Name = "panel5";
@@ -489,12 +595,12 @@ namespace MBS_PROYECT
             this.label3.Text = "Precio:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // txtCant
             // 
-            this.textBox2.Location = new System.Drawing.Point(74, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(40, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtCant.Location = new System.Drawing.Point(74, 29);
+            this.txtCant.Name = "txtCant";
+            this.txtCant.Size = new System.Drawing.Size(40, 20);
+            this.txtCant.TabIndex = 3;
             // 
             // label2
             // 
@@ -507,12 +613,12 @@ namespace MBS_PROYECT
             this.label2.Text = "CANTIDAD:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // txtArticulo
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtArticulo.Location = new System.Drawing.Point(73, 6);
+            this.txtArticulo.Name = "txtArticulo";
+            this.txtArticulo.Size = new System.Drawing.Size(170, 20);
+            this.txtArticulo.TabIndex = 1;
             // 
             // label1
             // 
@@ -632,7 +738,7 @@ namespace MBS_PROYECT
             // depositoToolStripMenuItem
             // 
             this.depositoToolStripMenuItem.Name = "depositoToolStripMenuItem";
-            this.depositoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.depositoToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.depositoToolStripMenuItem.Text = "Deposito";
             this.depositoToolStripMenuItem.Click += new System.EventHandler(this.DepositoToolStripMenuItem_Click);
             // 
@@ -659,8 +765,8 @@ namespace MBS_PROYECT
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabla_productos)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.txtCantidad.ResumeLayout(false);
+            this.txtCantidad.PerformLayout();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_graficas)).EndInit();
             this.panel5.ResumeLayout(false);
@@ -679,20 +785,16 @@ namespace MBS_PROYECT
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView tabla_productos;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel txtCantidad;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label18;
@@ -726,6 +828,17 @@ namespace MBS_PROYECT
         private System.Windows.Forms.ToolStripMenuItem retiroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem depositoToolStripMenuItem;
         public System.Windows.Forms.PictureBox contenedor_img;
+        private System.Windows.Forms.Button button7;
+        public System.Windows.Forms.DataGridView tabla_productos;
+        public System.Windows.Forms.Label LBLTOT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cod_Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proveedor;
+        public System.Windows.Forms.TextBox txtArticulo;
+        public System.Windows.Forms.TextBox txtCant;
     }
 }
 

@@ -12,11 +12,15 @@ namespace MBS_PROYECT
 {
     public partial class vtn_facturacion : Form
     {
-        public vtn_facturacion()
+        public vtn_facturacion(string MontoTot,string Pago)
         {
             InitializeComponent();
-        }
+            montototal.Text = MontoTot;
+            lblPago.Text = Pago;
 
+            float cambio = float.Parse(Pago) - float.Parse(MontoTot);
+            lblCambio.Text = cambio.ToString();
+        }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -60,6 +64,23 @@ namespace MBS_PROYECT
 
         private void Pnlcambio_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void montototal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Main m = new Main();
+            m.Show();
 
         }
     }

@@ -46,7 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscar.Designer.cs">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="conexion.cs" />
+    <Compile Include="DATOSENTREFORM.cs" />
+    <Compile Include="Pago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pago.Designer.cs">
+      <DependentUpon>Pago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MBS_DATADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MBS_DATADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="vtn_inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtn_inventario.designer.cs">
+      <DependentUpon>vtn_inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vtn_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vtn_Proveedores.designer.cs">
+      <DependentUpon>vtn_Proveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="vtnDepositos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,23 +95,11 @@
     <Compile Include="vtn_facturacion.Designer.cs">
       <DependentUpon>vtn_facturacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="vtn_inventario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vtn_inventario.designer.cs">
-      <DependentUpon>vtn_inventario.cs</DependentUpon>
-    </Compile>
     <Compile Include="vtn_registro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vtn_registro.designer.cs">
       <DependentUpon>vtn_registro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -97,20 +121,29 @@
     <Compile Include="vtn_Retiros.Designer.cs">
       <DependentUpon>vtn_Retiros.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Buscar.resx">
+      <DependentUpon>Buscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pago.resx">
+      <DependentUpon>Pago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtn_inventario.resx">
+      <DependentUpon>vtn_inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vtn_Proveedores.resx">
+      <DependentUpon>vtn_Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vtnDepositos.resx">
       <DependentUpon>vtnDepositos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vtn_facturacion.resx">
       <DependentUpon>vtn_facturacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vtn_inventario.resx">
-      <DependentUpon>vtn_inventario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="vtn_registro.resx">
       <DependentUpon>vtn_registro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -130,6 +163,17 @@
     <EmbeddedResource Include="vtn_Retiros.resx">
       <DependentUpon>vtn_Retiros.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="MBS_DATADataSet.xsc">
+      <DependentUpon>MBS_DATADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MBS_DATADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MBS_DATADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MBS_DATADataSet.xss">
+      <DependentUpon>MBS_DATADataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

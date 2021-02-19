@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 
 
@@ -18,6 +19,51 @@ namespace MBS_PROYECT
         {
             InitializeComponent();
         }
+
+        SqlConnection con = new SqlConnection("server=FER-PC\\FERNANDO01;database=MBS_DATA;integrated security = true");
+
+        public void logear(string user, string pass) {
+
+            try
+            {
+
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT Nombre,Contraseña FROM USUARIO WHERE Nombre = @nombre AND Contraseña = Contraseña", con);
+                cmd.Parameters.AddWithValue("nombre", user);
+                cmd.Parameters.AddWithValue("contraseña", pass);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+
+                if (dt.Rows.Count == 1)
+                {
+                    this.Hide();
+                    if (dt.Rows[1][2].ToString() == "Admin")
+                    {
+                        //Form vtnMain new Main(dt.Rows[1][1].ToString());
+
+
+                    }
+                    else if (dt.Rows[1][2].ToString() == "Usuario") { 
+                    
+                    }
+
+                }
+                else {
+                    MessageBox.Show("Usuario y/o Contraseña Incorrecta");
+                }
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message);
+            }
+            finally { 
+            
+
+            }
+        }
+
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -44,11 +90,13 @@ namespace MBS_PROYECT
         {
             Form vtnReg = new vtn_registro();
             vtnReg.Show();
+
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Conexion_BD.conexion.Conectar();
+           
 
             if (txtUser.Text == "admin" && txtPass.Text == "admin123")
             {
@@ -64,6 +112,48 @@ namespace MBS_PROYECT
             {
                 MessageBox.Show("Contraseña o Usuarioincorrectos :(");
             }
+
+            BorrarMensajeError();
+            if (
+            ValidarCampos())
+            {
+                MessageBox.Show("Datos ingresados correctamente");
+            }
+
+        }
+
+        private void txtPass_Enter(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = true;
+        }
+
+        private bool ValidarCampos()
+        {
+
+            bool ok = true;
+            if (txtUser.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txtUser, "Ingrese su usuario");
+            }
+
+            if (txtPass.Text == "")
+            {
+                ok = false;
+                errorProvider1.SetError(txtPass, "Ingrese su Contraseña");
+            }
+
+            return ok;
+        }
+
+        //validacion para borrar mensaje de error
+
+        private void BorrarMensajeError()
+        {
+            errorProvider1.SetError(txtUser, "");
+            errorProvider1.SetError(txtPass, "");
+            
+
         }
     }
 }

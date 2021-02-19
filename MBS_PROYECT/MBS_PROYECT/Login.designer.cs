@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.TitleBar = new System.Windows.Forms.Panel();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
@@ -42,9 +43,11 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.TitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // TitleBar
@@ -55,7 +58,7 @@
             this.TitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.TitleBar.Location = new System.Drawing.Point(0, 0);
             this.TitleBar.Name = "TitleBar";
-            this.TitleBar.Size = new System.Drawing.Size(314, 50);
+            this.TitleBar.Size = new System.Drawing.Size(327, 50);
             this.TitleBar.TabIndex = 0;
             this.TitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TitleBar_MouseMove);
             // 
@@ -89,7 +92,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 461);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 15);
+            this.panel1.Size = new System.Drawing.Size(327, 15);
             this.panel1.TabIndex = 1;
             // 
             // txtUser
@@ -133,6 +136,7 @@
             this.txtPass.Size = new System.Drawing.Size(278, 20);
             this.txtPass.TabIndex = 4;
             this.txtPass.Tag = "";
+            this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
             // 
             // checkBox1
             // 
@@ -196,12 +200,16 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(314, 476);
+            this.ClientSize = new System.Drawing.Size(327, 476);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabel1);
@@ -221,6 +229,7 @@
             this.TitleBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +250,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

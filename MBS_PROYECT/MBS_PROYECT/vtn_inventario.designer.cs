@@ -28,295 +28,342 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.dvgTablaDatos = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgTablaDatos)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.grbRegistroProduct = new System.Windows.Forms.GroupBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.lblProveedor = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.cbxProveedor = new System.Windows.Forms.ComboBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.lblRegistro = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.dgvDatosProductos = new System.Windows.Forms.DataGridView();
+            this.grbRegistroProduct.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosProductos)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // grbRegistroProduct
             // 
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(423, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.grbRegistroProduct.Controls.Add(this.btnAgregar);
+            this.grbRegistroProduct.Controls.Add(this.txtCantidad);
+            this.grbRegistroProduct.Controls.Add(this.lblCantidad);
+            this.grbRegistroProduct.Controls.Add(this.lblProveedor);
+            this.grbRegistroProduct.Controls.Add(this.lblCategoria);
+            this.grbRegistroProduct.Controls.Add(this.cbxCategoria);
+            this.grbRegistroProduct.Controls.Add(this.cbxProveedor);
+            this.grbRegistroProduct.Controls.Add(this.txtPrecio);
+            this.grbRegistroProduct.Controls.Add(this.lblPrecio);
+            this.grbRegistroProduct.Controls.Add(this.txtDescripcion);
+            this.grbRegistroProduct.Controls.Add(this.txtCodigo);
+            this.grbRegistroProduct.Controls.Add(this.lblDescripcion);
+            this.grbRegistroProduct.Controls.Add(this.lblCodigo);
+            this.grbRegistroProduct.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grbRegistroProduct.Location = new System.Drawing.Point(12, 48);
+            this.grbRegistroProduct.Name = "grbRegistroProduct";
+            this.grbRegistroProduct.Size = new System.Drawing.Size(728, 170);
+            this.grbRegistroProduct.TabIndex = 2;
+            this.grbRegistroProduct.TabStop = false;
+            this.grbRegistroProduct.Text = "Registro";
             // 
-            // dvgTablaDatos
+            // btnAgregar
             // 
-            this.dvgTablaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgTablaDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dvgTablaDatos.Location = new System.Drawing.Point(12, 302);
-            this.dvgTablaDatos.Name = "dvgTablaDatos";
-            this.dvgTablaDatos.Size = new System.Drawing.Size(542, 206);
-            this.dvgTablaDatos.TabIndex = 1;
-            this.dvgTablaDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.btnAgregar.BackColor = System.Drawing.Color.Blue;
+            this.btnAgregar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(594, 67);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(121, 53);
+            this.btnAgregar.TabIndex = 10;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // Column1
+            // txtCantidad
             // 
-            this.Column1.HeaderText = "Codigo";
-            this.Column1.Name = "Column1";
+            this.txtCantidad.Location = new System.Drawing.Point(376, 127);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(192, 26);
+            this.txtCantidad.TabIndex = 8;
             // 
-            // Column2
+            // lblCantidad
             // 
-            this.Column2.HeaderText = "Descripción";
-            this.Column2.Name = "Column2";
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Location = new System.Drawing.Point(296, 130);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(67, 19);
+            this.lblCantidad.TabIndex = 7;
+            this.lblCantidad.Text = "Cantidad:";
             // 
-            // Column3
+            // lblProveedor
             // 
-            this.Column3.HeaderText = "Categoria";
-            this.Column3.Name = "Column3";
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedor.Location = new System.Drawing.Point(296, 86);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(76, 19);
+            this.lblProveedor.TabIndex = 6;
+            this.lblProveedor.Text = "Proveedor:";
             // 
-            // Column4
+            // lblCategoria
             // 
-            this.Column4.HeaderText = "Proveedor";
-            this.Column4.Name = "Column4";
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(296, 41);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(71, 19);
+            this.lblCategoria.TabIndex = 5;
+            this.lblCategoria.Text = "Categoria:";
             // 
-            // Column5
+            // cbxCategoria
             // 
-            this.Column5.HeaderText = "Precio";
-            this.Column5.Name = "Column5";
+            this.cbxCategoria.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Items.AddRange(new object[] {
+            "Perecederos",
+            "Bebés",
+            "Cuidado Del Hogar",
+            "Lácteos",
+            "Alacena",
+            "Cuidado Personal",
+            "Mascotas",
+            "Jugos, Bebibas y Snacks",
+            "Otros"});
+            this.cbxCategoria.Location = new System.Drawing.Point(376, 38);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(192, 27);
+            this.cbxCategoria.TabIndex = 4;
+            this.cbxCategoria.Text = "Seleccione Categoria";
             // 
-            // groupBox1
+            // cbxProveedor
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 67);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(542, 170);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Registro";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.cbxProveedor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxProveedor.FormattingEnabled = true;
+            this.cbxProveedor.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.cbxProveedor.Location = new System.Drawing.Point(376, 83);
+            this.cbxProveedor.Name = "cbxProveedor";
+            this.cbxProveedor.Size = new System.Drawing.Size(192, 27);
+            this.cbxProveedor.TabIndex = 3;
+            this.cbxProveedor.Text = "Seleccione Proveedor";
             // 
-            // comboBox2
+            // txtPrecio
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Limpieza",
-            "Hogar",
-            "Electronica"});
-            this.comboBox2.Location = new System.Drawing.Point(283, 36);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 4;
-            this.comboBox2.Text = "Categoria";
+            this.txtPrecio.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Location = new System.Drawing.Point(105, 130);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(176, 21);
+            this.txtPrecio.TabIndex = 2;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
-            // comboBox1
+            // lblPrecio
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Juan",
-            "Mario",
-            "Saul",
-            "Pedro"});
-            this.comboBox1.Location = new System.Drawing.Point(283, 62);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = "Proveedor";
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(15, 130);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(51, 19);
+            this.lblPrecio.TabIndex = 1;
+            this.lblPrecio.Text = "Precio:";
             // 
-            // textBox3
+            // txtDescripcion
             // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(103, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(143, 21);
-            this.textBox3.TabIndex = 2;
+            this.txtDescripcion.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(105, 86);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(176, 21);
+            this.txtDescripcion.TabIndex = 2;
             // 
-            // label4
+            // txtCodigo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 19);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Precio:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.txtCodigo.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(105, 45);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(176, 21);
+            this.txtCodigo.TabIndex = 2;
             // 
-            // textBox4
+            // lblDescripcion
             // 
-            this.textBox4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(103, 62);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(143, 21);
-            this.textBox4.TabIndex = 2;
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(15, 86);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(84, 19);
+            this.lblDescripcion.TabIndex = 1;
+            this.lblDescripcion.Text = "Descripción:";
             // 
-            // textBox2
+            // lblCodigo
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(103, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(143, 21);
-            this.textBox2.TabIndex = 2;
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(15, 41);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(57, 19);
+            this.lblCodigo.TabIndex = 1;
+            this.lblCodigo.Text = "Codigo:";
             // 
-            // label3
+            // btnEliminar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 19);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Descripción:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.btnEliminar.BackColor = System.Drawing.Color.Red;
+            this.btnEliminar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Location = new System.Drawing.Point(562, 399);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(178, 44);
+            this.btnEliminar.TabIndex = 11;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // label2
+            // btnModificar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Codigo:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.btnModificar.BackColor = System.Drawing.Color.Purple;
+            this.btnModificar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Location = new System.Drawing.Point(562, 332);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(178, 45);
+            this.btnModificar.TabIndex = 9;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // button3
+            // txtBuscar
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(423, 114);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(96, 37);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button1_Click);
+            this.txtBuscar.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(12, 236);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(565, 22);
+            this.txtBuscar.TabIndex = 2;
             // 
-            // button2
+            // lblRegistro
             // 
-            this.button2.BackColor = System.Drawing.Color.Indigo;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.Location = new System.Drawing.Point(423, 67);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 37);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Moficar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.lblRegistro.AutoSize = true;
+            this.lblRegistro.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistro.Location = new System.Drawing.Point(269, 22);
+            this.lblRegistro.Name = "lblRegistro";
+            this.lblRegistro.Size = new System.Drawing.Size(194, 23);
+            this.lblRegistro.TabIndex = 3;
+            this.lblRegistro.Text = "Registro de Inventario";
             // 
-            // textBox1
+            // btnBuscar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 265);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(404, 22);
-            this.textBox1.TabIndex = 2;
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnBuscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnBuscar.Location = new System.Drawing.Point(596, 228);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(112, 35);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // label1
+            // dgvDatosProductos
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(192, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 23);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Registro de Inventario";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(435, 259);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 31);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Buscar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.dgvDatosProductos.AllowUserToAddRows = false;
+            this.dgvDatosProductos.AllowUserToDeleteRows = false;
+            this.dgvDatosProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDatosProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvDatosProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatosProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvDatosProductos.ColumnHeadersHeight = 20;
+            this.dgvDatosProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvDatosProductos.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDatosProductos.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvDatosProductos.EnableHeadersVisualStyles = false;
+            this.dgvDatosProductos.Location = new System.Drawing.Point(12, 264);
+            this.dgvDatosProductos.Name = "dgvDatosProductos";
+            this.dgvDatosProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatosProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvDatosProductos.Size = new System.Drawing.Size(531, 242);
+            this.dgvDatosProductos.TabIndex = 5;
             // 
             // vtn_inventario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(563, 520);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dvgTablaDatos);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(771, 518);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.dgvDatosProductos);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.lblRegistro);
+            this.Controls.Add(this.grbRegistroProduct);
+            this.Controls.Add(this.txtBuscar);
+            this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "vtn_inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion de Inventario";
-            ((System.ComponentModel.ISupportInitialize)(this.dvgTablaDatos)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.vtn_inventario_Load);
+            this.grbRegistroProduct.ResumeLayout(false);
+            this.grbRegistroProduct.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDatosProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dvgTablaDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox grbRegistroProduct;
+        private System.Windows.Forms.Label lblRegistro;
+        private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.ComboBox cbxProveedor;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Label lblProveedor;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.DataGridView dgvDatosProductos;
     }
 }
 
